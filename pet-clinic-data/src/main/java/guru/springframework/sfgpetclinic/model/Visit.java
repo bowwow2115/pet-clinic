@@ -1,11 +1,21 @@
 package guru.springframework.sfgpetclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "visits")
 public class Visit extends BaseEntity {
+    @Column(name = "date")
     private LocalDate date;
-    private String desription;
+    @Column(name = "description")
+    private String description;
+    @ManyToOne
+    @JoinColumn(name = "pet_id")
     private Pet pet;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 
     public LocalDate getDate() {
         return date;
@@ -15,12 +25,12 @@ public class Visit extends BaseEntity {
         this.date = date;
     }
 
-    public String getDesription() {
-        return desription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesription(String desription) {
-        this.desription = desription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Pet getPet() {
@@ -30,4 +40,12 @@ public class Visit extends BaseEntity {
     public void setPet(Pet pet) {
         this.pet = pet;
     }
+
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
+//
+//    public Long getId() {
+//        return id;
+//    }
 }

@@ -19,9 +19,9 @@ public class Owner extends Person {
     private String telephone;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owners")
     private Set<Pet> pets = new HashSet<Pet>();
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 
     public Set<Pet> getPets() {
         return pets;
@@ -55,11 +55,11 @@ public class Owner extends Person {
         this.telephone = telephone;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
+//
+//    public Long getId() {
+//        return id;
+//    }
 }
