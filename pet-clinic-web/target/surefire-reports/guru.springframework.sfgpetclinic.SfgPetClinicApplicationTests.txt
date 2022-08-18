@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: guru.springframework.sfgpetclinic.SfgPetClinicApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.009 s <<< FAILURE! - in guru.springframework.sfgpetclinic.SfgPetClinicApplicationTests
+contextLoads(guru.springframework.sfgpetclinic.SfgPetClinicApplicationTests)  Time elapsed: 0.017 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [guru.springframework.sfgpetclinic.bootstrap.DataLoader] from ClassLoader [sun.misc.Launcher$AppClassLoader@6bc7c054]
+Caused by: java.lang.NoClassDefFoundError: Lguru/springframework/sfgpetclinic/services/OwnerService;
+Caused by: java.lang.ClassNotFoundException: guru.springframework.sfgpetclinic.services.OwnerService
+
