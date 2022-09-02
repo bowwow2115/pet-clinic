@@ -1,5 +1,6 @@
 package guru.springframework.sfgpetclinic.services.map;
 
+import com.sun.xml.internal.bind.v2.model.core.ID;
 import guru.springframework.sfgpetclinic.model.BaseEntity;
 
 import java.util.*;
@@ -54,4 +55,6 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
 
         return nextId;
     }
+
+//    public abstract void deleteById(com.sun.xml.internal.bind.v2.model.core.ID id);
 }
